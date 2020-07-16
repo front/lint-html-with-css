@@ -1,0 +1,11 @@
+// Heading
+// ---------
+
+// Headings out of order
+:is(h2, h3, h4, h5, h6) ~ h1,
+:is(h3, h4, h5, h6) ~ h2,
+:is(h4, h5, h6) ~ h3,
+:is(h5, h6) ~ h4,
+h6 ~ h5 {
+  outline: $border-width dashed $danger-color;
+}

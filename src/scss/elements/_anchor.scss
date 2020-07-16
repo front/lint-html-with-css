@@ -1,0 +1,7 @@
+// Anchor
+// ---------
+
+// Prevent unsecure [target="_blank] links
+a[target='_blank']:not([rel~='noopener']):not([rel~='noreferrer']) {
+  outline: $border-width dashed $danger-color;
+}

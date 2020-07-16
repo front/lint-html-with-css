@@ -1,0 +1,30 @@
+@import 'variables';
+
+@import 'elements/anchor';
+@import 'elements/form';
+@import 'elements/heading';
+@import 'elements/html';
+@import 'elements/image';
+
+// <picture> elements that do not contain .webp <source>
+picture > source:first-child:not([type="image/webp"])::before {
+  content: "Missing a webp source";
+  padding: 1em;
+  display: block;
+  outline: $border-width solid $info-color;
+}
+
+// Inline element
+// ---------
+// Div inside inline elements
+:is(b, i, q, em, abbr, cite, code, span, small, label, strong) > div {
+  outline: $border-width dashed $warning-color;
+}
+
+// Inline style
+// ---------
+// Style to make the elements noticeable
+*[style] {
+  border: $border-width solid $warning-color;
+  position: relative;
+}

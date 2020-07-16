@@ -1,0 +1,34 @@
+a[target='_blank']:not([rel~='noopener']):not([rel~='noreferrer']) {
+  outline: 2px dashed #dc3545; }
+
+input:not([id]),
+label:not([for]) {
+  outline: 2px dashed #ffc107; }
+
+:is(h2, h3, h4, h5, h6) ~ h1,
+:is(h3, h4, h5, h6) ~ h2,
+:is(h4, h5, h6) ~ h3,
+:is(h5, h6) ~ h4,
+h6 ~ h5 {
+  outline: 2px dashed #dc3545; }
+
+html:not([lang]):before {
+  display: block;
+  content: "You didn't declare lang attribute";
+  color: #ffc107; }
+
+img:not([alt]) {
+  outline: 2px dashed #dc3545; }
+
+picture > source:first-child:not([type="image/webp"])::before {
+  content: "Missing a webp source";
+  padding: 1em;
+  display: block;
+  outline: 2px solid #17a2b8; }
+
+:is(b, i, q, em, abbr, cite, code, span, small, label, strong) > div {
+  outline: 2px dashed #ffc107; }
+
+*[style] {
+  border: 2px solid #ffc107;
+  position: relative; }

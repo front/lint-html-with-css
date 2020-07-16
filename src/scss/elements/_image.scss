@@ -1,0 +1,7 @@
+// Image
+// ---------
+
+// Images without alt attribute
+img:not([alt]) {
+  outline: $border-width dashed $danger-color;
+}

@@ -1,0 +1,9 @@
+// Html
+// ---------
+
+// Lang attribute in html document
+html:not([lang]):before {
+  display: block;
+  content: "You didn't declare lang attribute";
+  color: $warning-color;
+}
