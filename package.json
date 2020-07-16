@@ -1,0 +1,24 @@
+{
+  "name": "@frontkom/lint-html-with-css",
+  "version": "1.0.0",
+  "description": "Let CSS lint your HTML pages.",
+  "main": "index.js",
+  "keywords": [
+    "lint",
+    "html",
+    "scss",
+    "css"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "node-sass src/scss/style.scss css/style.css",
+    "build": "npx postcss css/*.css --use autoprefixer -d build/"
+  },
+  "author": "Sofia Sousa <sofia@frontkom.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^7.1.1"
+  }
+}
