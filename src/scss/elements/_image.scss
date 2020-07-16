@@ -1,7 +1,8 @@
 // Image
 // ---------
 
-// Images without alt attribute
-img:not([alt]) {
+// Images without alt attribute or with a empty alt
+img:not([alt]),
+img[alt=""] {
   outline: $border-width dashed $danger-color;
 }

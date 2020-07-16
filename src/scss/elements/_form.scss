@@ -1,8 +1,10 @@
 // Form
 // ---------
 
-// Input or label without id or for attribute
+// Form elements or label without id or for attribute
 input:not([id]),
+select:not([id]),
+textarea:not([id]),
 label:not([for]) {
   outline: $border-width dashed $warning-color;
 }
