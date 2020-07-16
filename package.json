@@ -1,6 +1,6 @@
 {
   "name": "@frontkom/lint-html-with-css",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Let CSS lint your HTML pages.",
   "main": "index.js",
   "keywords": [
@@ -11,14 +11,22 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "node-sass src/scss/style.scss css/style.css",
-    "build": "npx postcss css/*.css --use autoprefixer -d build/"
+    "prebuild": "node-sass src/scss/style.scss --output-style=compressed css/style.css",
+    "build": "npx postcss css/*.css --use autoprefixer -d build/",
+    "deploy": "npm publish --access public"
   },
   "author": "Sofia Sousa <sofia@frontkom.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.8.5",
     "node-sass": "^4.14.1",
     "postcss-cli": "^7.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/front/lint-html-with-css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/front/lint-html-with-css.git"
   }
 }
